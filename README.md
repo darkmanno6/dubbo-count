@@ -1,0 +1,2 @@
+# dubbo-count
+简单的基于telnet的统计dubbo中facade以及method列表的shell脚本
