@@ -1,0 +1,1048 @@
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-xxw 端口: 15090
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.xxw.XxwFacade 方法列表如下:
+====================================
+aicai.facade.user2.xxw.domain.XxwResultVo collect(java.lang.String,java.lang.String,java.lang.String)
+aicai.facade.user2.xxw.domain.XxwResultVo init(java.lang.String)
+byte[] refreshImage(java.lang.String)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-contract 端口: 15140
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.common.TsignsFacade 方法列表如下:
+====================================
+aicai.vo.result.ResultVo getTsignPlatSelfFile(aicai.facade.user2.common.vo.TsignPlatSelfFileVo)
+aicai.vo.result.ResultVo getTsignPlatUserFile(aicai.facade.user2.common.vo.TsignPlatUserFileVo)
+aicai.vo.result.ResultVo completeTsignOneTimeBySign(aicai.facade.user2.common.vo.TsignCompleteOneTimeVo)
+aicai.vo.result.ResultVo completeTsignOneTimeByTempSign(aicai.facade.user2.common.vo.TsignCompleteOneTimeTempVo)
+aicai.vo.result.ResultVo saveSignedFile(aicai.facade.user2.common.vo.TsignCreateVo)
+aicai.vo.result.ResultVo completeTsignOneTimeViaServer(aicai.facade.user2.common.vo.TsignCompleteOneTimeTempVo)
+aicai.vo.result.ResultVo getUrlByDocId(java.lang.Integer)
+aicai.vo.result.ResultVo completeTsignByTemplateSeal(aicai.facade.user2.common.vo.TsignCompleteOneTimeVo)
+java.lang.String createTsignTask(aicai.facade.user2.common.vo.TsignCreateVo)
+aicai.vo.result.ResultVo getTsignUserAccount(java.lang.Long)
+aicai.vo.result.ResultVo getTsignUserEventCert(aicai.facade.user2.common.vo.TsignUserEventCertVo)
+
+facade名:aicai.facade.user2.common.UserContractFacade 方法列表如下:
+====================================
+int updateUserElectronicContract(aicai.facade.user2.base.vo.response.UserElectronicContractVo)
+java.util.List getUnSuccessElectronicContracts(int)
+java.lang.Long saveUserElectronicSign(aicai.facade.user2.base.vo.response.UserElectronicSignVo)
+aicai.facade.user2.base.vo.response.UserElectronicSignVo getUserElectronicSignByUserId(java.lang.Long)
+void updateUserElectronicSign(aicai.facade.user2.base.vo.response.UserElectronicSignVo)
+java.util.List getUnSignElectronicContracts(int)
+int updateUserElectronicContractTask(aicai.facade.user2.base.vo.request.UserElectronicContractTaskVo)
+void signUserElectronicContract(aicai.facade.user2.base.vo.response.UserElectronicContractVo)
+void autoSignUserElectronicContract(aicai.facade.user2.base.vo.response.UserElectronicContractVo)
+void batchFinishElectronicSign()
+aicai.facade.user2.common.vo.UserContractBaseVo createUserContractBase(aicai.facade.user2.common.vo.UserContractBaseVo)
+aicai.facade.user2.common.vo.UserContractBaseVo createUserContractBaseWithPdf(aicai.facade.user2.common.vo.UserContractBaseVo)
+void modifyUserContractBaseByThirdPlatDone(aicai.facade.user2.common.vo.UserContractBaseVo)
+aicai.facade.user2.common.vo.UserContractTemplateVo viewContractByContractNo(java.lang.String)
+java.util.List queryUserContractList(aicai.facade.user2.common.vo.UserContractBaseVo,int,int)
+int queryUserContractCount(aicai.facade.user2.common.vo.UserContractBaseVo)
+java.util.List queryUserContractTemplateList(aicai.facade.user2.common.vo.UserContractTemplateVo,int,int)
+int queryUserContractTemplateCount(aicai.facade.user2.common.vo.UserContractTemplateVo)
+void updateContractTemplateStatus(java.lang.String,aicai.facade.user2.common.enums.ActiveStatusCommonEnum)
+void insertUserContractTemplate(aicai.facade.user2.common.vo.UserContractTemplateVo)
+void updateUserContractTemplate(aicai.facade.user2.common.vo.UserContractTemplateVo)
+java.lang.String generateTempUrl(java.lang.String,int)
+aicai.facade.user2.common.vo.UserContractBaseVo findUserContractBaseByNo(java.lang.String)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo createUserElectronicContractByUserId(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo getUserNewElectronicContract(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo getUserElectronicContractVoById(java.lang.Long)
+aicai.facade.user2.common.vo.response.UserTsignInfoVo getUserTsignInfoVoByUserId(java.lang.Long)
+aicai.facade.user2.common.vo.UserContractTemplateVo findUserContractTemplateByNo(java.lang.String)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-common 端口: 15010
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.common.UserDetectFacade 方法列表如下:
+====================================
+aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo getNewOcrInfoByuseId(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo getNewOcrInfoByuseIdSource(java.lang.Long,java.lang.Integer)
+aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo getNewValidOcrByUseId(java.lang.Long)
+aicai.facade.user2.common.vo.response.UserInfoVivodetectVo getNewVivoInfoByuseIdSource(java.lang.Long,java.lang.Integer)
+java.util.List getUserVivoListByUserId(java.lang.Long)
+aicai.facade.user2.common.vo.response.UserInfoVivodetectVo getNewsValidVivoByUserId(java.lang.Long)
+int updateUserElectronicContract(aicai.facade.user2.base.vo.response.UserElectronicContractVo)
+java.lang.Long saveUserElectronicSign(aicai.facade.user2.base.vo.response.UserElectronicSignVo)
+aicai.facade.user2.base.vo.response.UserElectronicSignVo getUserElectronicSignByUserId(java.lang.Long)
+void updateUserElectronicSign(aicai.facade.user2.base.vo.response.UserElectronicSignVo)
+java.util.List getNewValidVivoInfoByUseIdSources(java.lang.Long,java.util.List)
+boolean getImgPoliceState(java.lang.Long,java.lang.String)
+aicai.facade.user2.common.vo.response.UserDetectVivoStatVo getVivoDetectStatByVivoId(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo createUserElectronicContractByUserId(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo getUserNewElectronicContract(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo getUserElectronicContractVoById(java.lang.Long)
+aicai.facade.user2.common.vo.response.UserTsignInfoVo getUserTsignInfoVoByUserId(java.lang.Long)
+void signUserElectronicContract(aicai.facade.user2.base.vo.response.UserElectronicContractVo)
+void autoSignUserElectronicContract(aicai.facade.user2.base.vo.response.UserElectronicContractVo)
+java.lang.Long saveVivoInfo(aicai.facade.user2.common.vo.response.UserInfoVivodetectVo)
+aicai.facade.user2.common.vo.response.UserDetectStatVo getDetctStatByuserId(java.lang.Long)
+void modifyVivoInfo(aicai.facade.user2.common.vo.response.UserInfoVivodetectVo)
+java.lang.Long saveOcrInfo(aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo)
+void modefyOcrInfo(aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo)
+aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo getOcrById(java.lang.Long)
+java.lang.Long saveTapInfo(aicai.facade.user2.common.vo.response.UserInfoTapingVo)
+void modifyTapInfo(aicai.facade.user2.common.vo.response.UserInfoTapingVo)
+aicai.facade.user2.common.vo.response.UserAuthImgCompareVo userImgCompare(java.lang.Long,java.lang.String)
+aicai.facade.user2.common.vo.response.UserAuthImgCompareVo queryImgCompare(java.lang.Long,java.lang.String)
+int getOcrCountByWhere(aicai.vo.search.SearchQuery)
+void putInCacheByBindPhone(java.lang.Long,java.lang.String)
+boolean getFromCacheByBindPhone(java.lang.Long,java.lang.String)
+aicai.facade.user2.common.vo.response.UserInfoVivodetectVo getUserInfoVivodetectVoById(java.lang.Long)
+
+facade名:aicai.facade.user2.common.UserServiceLocationMatchFacade 方法列表如下:
+====================================
+java.lang.Long insertUserServiceLocationMatch(aicai.facade.user2.common.vo.UserServiceLocationMatchVo)
+aicai.facade.user2.common.vo.UserServiceLocationMatchVo getUserServiceLocationMatch(java.lang.Long,java.lang.String)
+void updateUserServiceLocationMatch(aicai.facade.user2.common.vo.UserServiceLocationMatchVo)
+aicai.facade.user2.common.vo.UserServiceLocationMatchVo getUserServiceLocationMatchById(java.lang.Long)
+aicai.facade.user2.common.vo.UserLocationParameterVo getUserLocationParameter(java.lang.Long,java.lang.String,boolean)
+aicai.vo.search.SearchResult listUserServiceLocationMatchListByPage(java.lang.Long,int,int)
+aicai.vo.search.SearchResult getUserServiceLocationMatchListByPage(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.mongo.common.MongoCommonFacade 方法列表如下:
+====================================
+void parseSocialSecurity(java.lang.Long,java.lang.String)
+void parseMongoFund(java.lang.Long,java.lang.String)
+aicai.facade.user2.mongo.common.vo.UserMongoFundVo getUserMongoFundVoByTaskId(java.lang.Long)
+void addDeviceContactsVo(aicai.facade.user2.mongo.common.vo.DeviceContactsVo)
+void addDeviceSoftsVo(aicai.facade.user2.mongo.common.vo.DeviceSoftsVo)
+aicai.facade.user2.mongo.common.vo.UserMongoSocialSecurityVo getUserMongoSocialSecurityVoByTaskId(java.lang.Long)
+
+facade名:aicai.facade.user2.common.RiskDeviceServiceFacade 方法列表如下:
+====================================
+aicai.facade.user2.base.vo.risk.RiskDeviceH5Vo doAppDeviceLocation(aicai.facade.user2.base.vo.risk.RiskDeviceH5Vo,java.lang.Long,java.lang.String,java.lang.String)
+
+facade名:aicai.facade.user2.common.UserGrabDataFacade 方法列表如下:
+====================================
+aicai.facade.user2.common.vo.UserGrabDataTaskVo createGrabDataTask(aicai.facade.user2.common.vo.CreateUserGrabDataTaskVo)
+aicai.facade.user2.common.vo.UserGrabDataTaskVo findGrabDataTaskById(java.lang.Long)
+void grabStatusCallBack(java.lang.String)
+java.util.List findGrabDataTaskListByIds(java.util.List)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-info 端口: 15020
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.credit.SelfCreditWorkorderFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserWorkorderSelfcreditCheckAllVo getSelfcreditCheckAllByCheckId(java.lang.Long)
+void storeUserAllByWOrkOrder(java.lang.Long)
+java.lang.Long sumbitSelfCreditMiddleCheck(aicai.facade.user2.base.vo.request.UserSelfcreditSubmitVo)
+java.lang.Long sumbitSelfCreditFreshCheck(aicai.facade.user2.base.vo.request.UserSelfcreditSubmitVo)
+void quitSelfCreditWorkorder(aicai.facade.user2.credit.vo.request.SelfcreditQuitVo)
+aicai.facade.user2.credit.vo.response.UserWorkorderSelfcreditCheckAllVo getSelfcreditCheckAllByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.response.SelfCreditUpdateResultVo updateSelfCreditCheck(aicai.facade.user2.credit.vo.request.SelfCreditModifyVo)
+void openWorkOrder(aicai.facade.user2.credit.vo.request.UserSlefCreditOpenVo)
+aicai.vo.search.SearchResult getDealLogListByCheckId(aicai.facade.user2.credit.vo.request.CheckTraceGetVo,int,int)
+java.lang.Long sumbitSelfCreditHighCheck(aicai.facade.user2.base.vo.request.UserSelfcreditSubmitVo)
+aicai.vo.search.SearchResult getSelfCreditWorkorderList(java.util.HashMap,int,int)
+void checkSelfCreditWorkorder(aicai.facade.user2.credit.vo.request.SelfcreditCheckVo)
+aicai.facade.user2.credit.vo.response.UserWorkorderSelfcreditCheckAllVo getNewSelf1CheckAllByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserWorkorderSelfcreditCheckAllVo getNewSelf2CheckAllByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserWorkorderSelfcreditCheckAllVo getNewFreshCheckAllByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserSelfCreditDetectStatVo getSelfCreditDetectStat(java.lang.Long)
+aicai.vo.search.SearchResult getSelfCreditWorkorderListNewParm(java.util.HashMap,int,int)
+aicai.facade.user2.base.vo.response.UserElectronicContractVo getElectronicContractByUserId(java.lang.Long)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.credit.GraduateBaseCreditFacade 方法列表如下:
+====================================
+java.lang.Long submitGraduateBaseCreditOrder(aicai.facade.user2.credit.vo.request.UserGraduationBaseCreditSubmitVo)
+aicai.facade.user2.credit.vo.response.GraduateBaseCreditResultVo getGraduateBaseCreditResult(java.util.HashMap)
+aicai.facade.user2.credit.vo.request.UserGraduationBaseCreditAllVo getGraduationBaseCreditAllById(java.lang.Long)
+aicai.facade.user2.credit.vo.request.UserGraduationBaseCreditAllVo getNewGraBaseBizInfoByUserId(java.lang.Long)
+java.lang.Long submitBaseGraduateInfoAll(aicai.facade.user2.credit.vo.request.UserGraduationBaseCreditAllVo)
+void storeBaseGraduateInfoByWorkorder(java.lang.Long)
+aicai.vo.search.SearchResult getDealLogListByCheckId(java.lang.Long,int,int)
+aicai.facade.user2.credit.vo.response.UserMobileOperatorVo submitMobileOperatorInfo(aicai.facade.user2.credit.vo.request.UserInfoMobileOperatorSubmitVo)
+aicai.vo.search.SearchResult getWorkOrderGraduationBaseList(java.util.HashMap,int,int)
+aicai.facade.user2.credit.vo.request.UserGraduationBaseCreditAllVo getGraduationBaseCreditAllByUserId(java.lang.Long)
+
+facade名:aicai.facade.user2.userinfo.UserCreditPlatformFacade 方法列表如下:
+====================================
+aicai.facade.user2.base.vo.CreditWorkorderVo getCreditWorkByPartnerAndBizId(java.lang.String,java.lang.String)
+java.lang.Long createCreditWorkorder(aicai.facade.user2.base.vo.CreditWorkorderVo)
+void updateCreditWorkorderById(aicai.facade.user2.base.vo.CreditWorkorderVo)
+void callBackCreditWork(aicai.facade.user2.base.vo.UserCreditWorkCallBackVo$EnumCreditBizType,aicai.facade.user2.base.vo.UserCreditWorkCallBackVo)
+aicai.facade.user2.base.vo.CreditWorkorderVo getCreditWorkOrderById(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.UserBizFacade 方法列表如下:
+====================================
+java.lang.Long applyUserCredit(aicai.facade.user2.base.vo.request.UserBizSerialVo)
+aicai.facade.user2.base.vo.request.UserBizSerialVo changeUserCredit(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserBizGetVo getUserBizByUserId(java.lang.Long)
+void updateUserBizInfo(aicai.facade.user2.base.vo.UserBizInfoVo)
+aicai.facade.user2.base.vo.UserBizInfoVo getUserBizInfoVoByUserId(java.lang.Long)
+aicai.facade.user2.base.vo.UserBizInfoVo getUserBizInfoVoByCache(java.lang.Long)
+aicai.facade.user2.base.vo.request.UserBizSerialVo getUserBizSerialByBaseCredit(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.IncreaseLimitApplyFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.request.UserBizBatchChangeLimitVo getIncreaseLimitApplyById(long)
+java.lang.Long submitIncreaseLimitApply(aicai.facade.user2.credit.vo.request.UserBizBatchChangeLimitVo)
+void delIncreaseLimitApply(long)
+java.lang.Long countIncreaseLimitResult(java.util.HashMap)
+java.util.List listIncreaseLimitResult(java.util.HashMap)
+long countIncreaseLimitApply(java.util.HashMap)
+java.util.List listIncreaseLimitApply(java.util.HashMap)
+void submitIncreaseLimitCheck(aicai.facade.user2.credit.vo.request.UserBizBatchChangeLimitVo)
+
+facade名:aicai.facade.user2.userinfo.KaiHuFacade 方法列表如下:
+====================================
+java.lang.Long register(aicai.facade.user2.userinfo.vo.request.RegVo)
+void openGraduateLoanAccount(long)
+aicai.facade.user2.base.vo.response.UserAuthGetVo getAuthByUserid(long)
+void destoryUser(long,int)
+void openCreditAccount(long)
+void unLockAccount(java.lang.Long[])
+void changeCredit_Add(long)
+void addAcrRecAuth(aicai.facade.user2.userinfo.vo.request.AcrRecAuthVo)
+boolean existLoanAccount(long)
+void ensureGetGift(long)
+void lockCreditAccount(long)
+void lockAccount(java.lang.Long[])
+void openLoanAccount(long)
+void openLoanAccountByYyyd(long)
+void openLoanAccountByGraduate(long)
+void openCommissionAccount(long)
+void openEducationAccount(long)
+java.lang.String delAccount(long,long)
+void destoryUser2NoOrderBill(java.lang.Long)
+void destoryUserInfo(long,int)
+long registerSuiMi(aicai.facade.user2.userinfo.vo.request.SuiMiLinkedVo)
+aicai.facade.user2.base.vo.response.UserAllGetVo checkSuiMiLink(aicai.facade.user2.userinfo.vo.request.SuiMiCheckVo)
+java.lang.Long registerByCashier(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+aicai.facade.user2.userinfo.vo.register.RegisterResultVo registerByThird(java.lang.String,aicai.facade.user2.userinfo.vo.register.RegisterH5Vo)
+void destroyUserNoCreditOrderBill(java.lang.Long)
+void openAccount(long,int)
+java.lang.String registerAuthVo(aicai.facade.user2.base.vo.request.RegAuthVo)
+void lockCreditAccountByUserId(aicai.facade.user2.userinfo.vo.request.LockCreditAccountVo)
+void lockAccounts(aicai.facade.user2.userinfo.vo.request.LockCreditAccountsVo)
+void unlockAccounts(aicai.facade.user2.userinfo.vo.request.LockCreditAccountsVo)
+aicai.facade.user2.userinfo.vo.response.UserCheckVo checkRegAuth(long)
+java.lang.Long registeByYyyd(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+java.lang.Long registerByThirdH5(java.lang.String,aicai.facade.user2.userinfo.vo.register.RegisterH5Vo)
+java.lang.Long registerByThirdAPP(java.lang.String,aicai.facade.user2.userinfo.vo.register.RegisterAppVo)
+java.lang.Long registerQuiet(aicai.facade.user2.userinfo.vo.request.RegQuietVo,java.lang.String)
+void registerSelfVo(aicai.facade.user2.userinfo.vo.request.RegSelfVo)
+aicai.facade.user2.userinfo.vo.response.UserCheckVo checkToWaittake(long)
+void registerAuthVo_Add(long)
+
+facade名:aicai.facade.user2.userinfo.ThirdUserDataFacade 方法列表如下:
+====================================
+int getCacheCountCreditCardByUserid(java.lang.Long)
+int getCountCreditCardByUserid(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.IncreaseLimitUserFacade 方法列表如下:
+====================================
+long countIncreaseLimitUser(java.util.HashMap)
+java.util.List listIncreaseLimitUser(java.util.HashMap)
+void batchInsertIncreaseLimitUser(java.util.List,long,long)
+void batchInsertIncreaseCheck(java.util.List,long,long)
+long countCheckResult(java.util.HashMap)
+java.util.List listCheckResult(java.util.HashMap)
+
+facade名:aicai.facade.user2.userinfo.DeviceInfoFacade 方法列表如下:
+====================================
+void uploadDeviceInfo(aicai.facade.user2.base.vo.task.DeviceInfoVo)
+int saveDeviceUniqueId(aicai.facade.user2.base.vo.task.DeviceUniqueIdVo)
+int updateDeviceUniqueId(aicai.facade.user2.base.vo.task.DeviceUniqueIdVo)
+java.util.List getListByD2orD1(java.util.HashMap)
+boolean updateUserByDevice(aicai.facade.user2.base.vo.task.DeviceInfoVo)
+aicai.facade.user2.base.vo.response.DeviceSdkTokenVo getDeviceSdkTokenByToken(java.lang.String)
+int saveDeviceInfoWeb(aicai.facade.user2.base.vo.task.DeviceInfoWebVo)
+java.util.List getListByFpId(java.lang.String)
+int updateDeviceInfoWeb(aicai.facade.user2.base.vo.task.DeviceInfoWebVo)
+int updateUserOfDeviceWeb(aicai.facade.user2.base.vo.task.DeviceInfoWebVo)
+aicai.facade.user2.base.vo.task.DeviceUploadLogVo getUploadInfoByUniqueId(java.lang.String)
+int saveDeviceUploadLog(aicai.facade.user2.base.vo.task.DeviceUploadLogVo)
+int updateDeviceUploadLog(aicai.facade.user2.base.vo.task.DeviceUploadLogVo)
+java.util.List getListByInternetIp(java.lang.Long)
+java.util.List getListByUuid(java.lang.String)
+aicai.facade.user2.base.vo.task.DeviceInfoVo getDeviceInfoByUniqueDid(java.lang.String)
+
+facade名:aicai.facade.user2.userinfo.CreditRealNameFacade 方法列表如下:
+====================================
+void openRealNameAuth(java.lang.Long)
+java.lang.String realNameByXuexin(aicai.facade.user2.base.vo.credit.RegXuexinVo)
+
+facade名:aicai.facade.user2.mongo.contacts.UserContactsMongoFacade 方法列表如下:
+====================================
+void addTelphoneContacts(long,java.util.List)
+void addTelContacts(long,java.util.List,boolean)
+java.util.List getTelphoneContacts(long)
+
+facade名:aicai.facade.user2.userinfo.UserFacade 方法列表如下:
+====================================
+aicai.facade.user2.userinfo.vo.response.UserAccountGetVo getAccount(long,java.lang.String)
+aicai.facade.user2.userinfo.vo.response.UserAccountGetDetailVo getAccountDetail(long,java.lang.String)
+aicai.facade.user2.userinfo.vo.response.UserGradAllGetVo getUserGradAll(long)
+boolean checkIdentifyCard(long,java.lang.String)
+java.util.List accountlist(long)
+void saveXuexin(aicai.facade.user2.userinfo.vo.request.UserCreditinfoAddVo)
+void saveXuexinFromAuth(aicai.facade.user2.userinfo.vo.request.UserChsiInfoVo)
+aicai.facade.user2.userinfo.vo.response.UserCreditinfoGetVo getXuexin(long)
+void delXuexin(long)
+java.util.List listUserPushInfo(long)
+void bindUserPushInfo(aicai.facade.user2.userinfo.vo.request.UserPushinfoAddVo)
+void updateUserPushInfo(aicai.facade.user2.userinfo.vo.request.UserPushinfoModifyVo)
+void deleteUserPushInfo(long)
+aicai.facade.user2.userinfo.vo.response.UserPushinfoVo getUserPush(long,java.lang.String,java.lang.String)
+java.lang.Integer setUserRepayDay(long,int)
+void modifyUserinfo(aicai.facade.user2.userinfo.vo.request.UserinfoModifyVo)
+aicai.facade.user2.base.vo.response.UserStatVo getUserStatByUserid(long)
+void updateUserGradeByFK(java.lang.Long)
+void modifyStatBySelf(aicai.facade.user2.userinfo.vo.request.UserSelfStatModifyVo)
+void closeStatBySelf(aicai.facade.user2.userinfo.vo.request.UserSelfColseVo)
+void userRejectOutTimeDeal(aicai.facade.user2.userinfo.vo.request.UserRejectOutTimeDealVo)
+void modifyMqStat(aicai.facade.user2.userinfo.vo.request.AcrStatModifyVo)
+void bindEmail(long,java.lang.String,boolean)
+void checkEmail(java.lang.Long,java.lang.String)
+java.lang.Long storeUserAll(aicai.facade.user2.base.vo.response.UserAllGetVo)
+aicai.facade.user2.userinfo.vo.response.UserInfoSignVo getUserSignByUserId(java.lang.Long)
+int insertUserExt(aicai.facade.user2.base.vo.UserExtVo)
+aicai.facade.user2.base.vo.UserExtVo getByExtUserId(java.lang.String)
+int updateUserExt(aicai.facade.user2.base.vo.UserExtVo)
+aicai.facade.user2.base.vo.UserExtVo getByUserId(java.lang.Long)
+void deleteByExtUserId(java.lang.String)
+void openRealNameAuth(java.lang.Long)
+aicai.facade.user2.userinfo.vo.response.UserGetVo getUser(long)
+aicai.facade.user2.base.vo.UserVo getUserVo(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserBizGetVo getUserBiz(long)
+aicai.facade.user2.base.vo.UserEducationVo getUserEducation(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoEmailVo getUserInfoEmail(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoSelfcheckVo getUserInfoSelfCheck(java.lang.Long)
+aicai.facade.user2.userinfo.vo.request.UserInfoAddressVo getUserInfoAddress(java.lang.Long)
+aicai.facade.user2.userinfo.vo.request.UserInfoJobVo getUserInfoJob(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoStatVo getUserInfoStat(java.lang.Long)
+int getCountCancelUser(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoFundVo getUserInfoFund(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoSocialSecurityVo getUserInfoSocialSecurity(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoGetVo getUserInfoByIdentifyCard(java.lang.String)
+void lockUser(aicai.facade.user2.userinfo.vo.request.backend.UserLockOperateVo)
+aicai.facade.user2.base.vo.response.UserAllGetVo getUserByIdentifyCard(java.lang.String)
+void unLockUser(aicai.facade.user2.userinfo.vo.request.backend.UserLockOperateVo)
+aicai.facade.user2.userinfo.vo.response.backend.UserLockVo getUserLockByUserId(java.lang.Long)
+void synUserInfo(aicai.facade.user2.userinfo.vo.request.UserInfoSaveVo,java.lang.String,java.lang.String,java.lang.String)
+aicai.facade.user2.userinfo.vo.response.UserAccountGetVo changeCredit(aicai.facade.user2.userinfo.vo.request.UserBizModifyVo)
+void updateUserSchool(aicai.facade.user2.userinfo.vo.request.UserSchoolModifyVo)
+java.lang.Long[] getUserIdsByRealName(java.lang.String)
+aicai.facade.user2.base.vo.response.UserCreditStatusVo getUserStatusSearchByUserId(java.lang.Long)
+java.lang.Long getUseridByTel(java.lang.String)
+aicai.facade.user2.base.vo.request.UserBizSerialVo changeCreditSerial(aicai.facade.user2.userinfo.vo.request.UserBizModifyVo)
+void cleanUserCache(long)
+void cleanUserAllCache(long)
+void operateLog(aicai.facade.user2.base.vo.response.UserOperateLogVo)
+java.lang.Long addoperateLog(aicai.facade.user2.base.vo.response.UserOperateLogVo)
+java.lang.Integer modifyUserinfoByRisk(aicai.facade.user2.userinfo.vo.request.UserinfoModifyVo,aicai.facade.user2.base.vo.response.UserOperateLogVo)
+aicai.facade.user2.userinfo.vo.response.UserAndComeFromVo getUserAndComeFromDetail(long)
+java.lang.Long storeGradUserAll(aicai.facade.user2.userinfo.vo.response.UserGradAllGetVo)
+void modifyContactsNoAndPic(aicai.facade.user2.userinfo.vo.request.AcrContactInfoVo)
+java.util.List UserAuthStep(long)
+void updateUserGradeFromFk(java.lang.Long)
+aicai.vo.search.SearchResult getOcrListByUserId(java.lang.Long)
+void updateInviteCodeByUserId(java.lang.Long,java.lang.String)
+boolean isUnVerifiedEducationGraduatinLoan7User(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoGetVo getInfoByUid(long)
+aicai.facade.user2.base.vo.UserSchoolVo getUserSchoolByUid(long)
+aicai.facade.user2.base.vo.info.UserIdentificationVo getUserIdentificationVo(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoContactVo getUserInfoContact(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoGetSchoolVo getUserInfoGetSchoolVo(java.lang.Long)
+java.lang.String getUidentifyImgbyId(java.lang.Long,int)
+
+facade名:aicai.facade.user2.userinfo.UserAssetsFacade 方法列表如下:
+====================================
+java.util.List getUserDirectoryByColumn(java.util.HashMap)
+void saveUserAssets(aicai.facade.user2.userinfo.vo.response.UserAssetsVo)
+java.util.List getUserAssetsByUID(java.lang.Long)
+aicai.facade.user2.userinfo.vo.response.UserAssetsVo getUserAssetsVoByUserId(java.lang.Long)
+void createAssetsIfNotExist(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.DataBizAmtCreditFacade 方法列表如下:
+====================================
+int batchUpdateUserCredit(aicai.facade.user2.credit.vo.request.DataBizAmtCreditSumbitVo)
+void batchUpdateUserCredit(java.lang.String)
+
+facade名:aicai.facade.user2.credit.WorkorderRejectFacade 方法列表如下:
+====================================
+void updCheckStatusCloseByUserIdAndCreditType(java.lang.Long,aicai.facade.user2.credit.enums.CreditModuleEnum)
+java.util.List getRejectFieldsByModule(aicai.facade.user2.credit.enums.CreditModuleEnum)
+aicai.facade.user2.credit.vo.request.WorkorderRejectVo getRejectByUserIdAndCreditTypeWithClose(java.lang.Long,aicai.facade.user2.credit.enums.CreditModuleEnum)
+aicai.facade.user2.credit.vo.request.WorkorderRejectVo getRejectByUserIdAndCreditType(java.lang.Long,aicai.facade.user2.credit.enums.CreditModuleEnum)
+
+facade名:aicai.facade.user2.userinfo.TelphoneFacade 方法列表如下:
+====================================
+void checkNewTel(aicai.facade.user2.userinfo.vo.request.UserTelModifyVo)
+void applyChangeTel(aicai.facade.user2.userinfo.vo.request.UserTelApplyModifyVo)
+void applyUnloginChangeTel(aicai.facade.user2.userinfo.vo.request.UserTelUnloginApplyModifyVo)
+void dealTel(aicai.facade.user2.userinfo.vo.request.UserTelDealVo)
+aicai.facade.user2.userinfo.vo.request.ApplyTelphoneInfoVo getApplyInfoByApplyId(java.lang.Long)
+
+facade名:aicai.facade.user2.userinfo.BankFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult listBankBind(java.util.HashMap,int,int)
+aicai.facade.user2.base.vo.response.UserBankGetVo getNewBankByUserId(java.lang.Long)
+void saveBank(aicai.facade.user2.userinfo.vo.request.UserBankAddVo)
+void modifyBank(aicai.facade.user2.userinfo.vo.request.UserBankModifyVo)
+aicai.facade.user2.base.vo.response.UserBankGetVo getBankById(long)
+aicai.facade.user2.base.vo.response.UserBankGetVo getBankByCardcode(java.lang.String,long,java.lang.String)
+aicai.facade.user2.base.vo.response.UserBankGetVo getBankByCardcode(java.lang.String,long)
+java.util.List banklist(long)
+java.util.List bankList(java.lang.Long,java.lang.String)
+java.lang.String bindBankPay(aicai.facade.user2.userinfo.vo.request.UserBankBindVo)
+void bankPayNotify(aicai.facade.user2.userinfo.vo.request.UserBankBindNotifyVo)
+void bankFefundNotfiy(aicai.facade.user2.userinfo.vo.request.UserBankBindFeFundNotifyVo)
+long getBankNum(long)
+void unbindBank(long,java.lang.String)
+
+facade名:aicai.facade.user2.userinfo.SecurityFacade 方法列表如下:
+====================================
+java.lang.Long login(aicai.facade.user2.userinfo.vo.request.LoginVo)
+aicai.facade.user2.userinfo.vo.response.SmsLoginResVo smsLogin(aicai.facade.user2.userinfo.vo.request.SmsLoginVo)
+void modifyPwd(aicai.facade.user2.userinfo.vo.request.PwdModifyVo)
+void forgetPwd(java.lang.String,java.lang.String)
+void firstSetPaypwd(long,java.lang.String)
+void modifyPaypwd(aicai.facade.user2.userinfo.vo.request.PwdPayModifyVo)
+void forgetPaypwd(long,java.lang.String)
+boolean checkPaypwd(long,java.lang.String)
+boolean checkPayPwdIsEmpty(long)
+
+facade名:aicai.facade.user2.credit.UserCreditDataFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserStatBizInfoVo getCacheUserStatBizInfoByUserId(java.lang.Long)
+void saveStatBizInfo(aicai.facade.user2.credit.vo.response.UserStatBizInfoVo)
+
+facade名:aicai.facade.user2.userinfo.UserDeliverFacade 方法列表如下:
+====================================
+long updateUserDeliver(aicai.facade.user2.userinfo.vo.response.UserDeliverVo)
+long delUserDeliver(java.lang.Long)
+void setDefaultDeliver(java.lang.Long,java.lang.Long)
+boolean updateReceIdcardForHaitao(java.lang.String,java.lang.Long)
+long insertUserDeliver(aicai.facade.user2.userinfo.vo.response.UserDeliverVo)
+aicai.facade.user2.userinfo.vo.response.UserDeliverVo getUserDeliverByKey(java.lang.Long)
+java.util.List getUserAllDelivers(java.lang.Long)
+aicai.facade.user2.userinfo.vo.response.UserDeliverVo getUserDefaultDeliverBy(java.lang.Long,java.lang.Long)
+aicai.vo.search.SearchResult getUserDeliverVoes(aicai.vo.search.SearchQuery)
+int getUserDeliverListCount(java.lang.Long)
+aicai.facade.user2.userinfo.vo.response.UserDeliverVo getUserDeliverByKeyForHaitao(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.UserCreditFacade 方法列表如下:
+====================================
+java.lang.Long applyUserCredit(aicai.facade.user2.base.vo.request.UserBizSerialVo)
+aicai.facade.user2.base.vo.request.UserBizSerialVo changeUserCredit(java.lang.Long)
+aicai.services.facade.risk.vo.reponse.credit.UserWhiteNameBakVo getUserWhiteName(aicai.services.facade.risk.vo.request.credit.UserWhiteNameVo)
+aicai.services.facade.risk.vo.reponse.credit.UserWhiteNameBakVo writeUserWhiteName(aicai.services.facade.risk.vo.request.credit.UserWhiteNameVo)
+aicai.vo.search.SearchResult queryWhiteLogList(java.util.HashMap,java.lang.Integer,java.lang.Integer)
+aicai.facade.user2.base.vo.request.UserBizSerialVo getUserBizSerialByBaseCredit(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.CreditToolCrawlTaskFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.crawltask.CrawlTaskBizStatVo getCrawlTaskBizStatVoByUserId(java.lang.Long)
+void storeCreditToolCrawlTask(java.lang.Long,aicai.facade.user2.credit.vo.crawltask.CreditToolCrawlTaskVo)
+aicai.facade.user2.credit.vo.crawltask.CreditToolCrawlTaskCreateResultVo createCreditToolCrawlTask(aicai.facade.user2.credit.vo.crawltask.CreditToolCrawlTaskCreateReqVo)
+aicai.facade.user2.credit.vo.crawltask.CrawlTaskBizStatVo getCrawlTaskBizStatVoByUserIdAndOrgType(java.lang.Long,java.lang.String)
+void updateCreditToolCrawlTaskVoByUserId(aicai.facade.user2.credit.vo.crawltask.CreditToolCrawlTaskVo)
+void addCreditToolCrawlTaskVoByUserId(aicai.facade.user2.credit.vo.crawltask.CreditToolCrawlTaskVo)
+
+facade名:aicai.facade.user2.userinfo.AuthWorkOrderFacade 方法列表如下:
+====================================
+java.lang.String regSchoolAuthVo(aicai.facade.user2.base.vo.request.RegSchoolVo)
+java.lang.String regGraduationAuthVo(aicai.facade.user2.userinfo.vo.request.RegGraduationVo,aicai.facade.user2.base.vo.RiskInfoVo)
+boolean isUserAuthpassDoAgain(aicai.facade.user2.base.vo.response.UserStatVo,java.util.Date)
+void authOpen(aicai.facade.user2.base.vo.request.RegAuthOpenVo,aicai.facade.user2.base.vo.RiskInfoVo,java.lang.String)
+java.lang.Integer addUpdateUserInfoIdentity(java.lang.String,java.lang.String,java.lang.String)
+java.lang.String realNameAuthVo(aicai.facade.user2.base.vo.request.RegAuthVo)
+aicai.facade.user2.base.vo.search.UserWorkorderRealnameSearchVo getWorkOrderByPrimaryKey(java.lang.Long)
+java.util.List getWorkOrderListByUserId(java.lang.Long)
+aicai.vo.search.SearchResult getWorkOrderListByWhere(java.util.HashMap,int,int)
+aicai.facade.user2.userinfo.vo.response.UserInfoIdentityVo getUserInfoIdentityVo(java.lang.String)
+aicai.vo.search.SearchResult getWorkOrderListByWhereNewParm(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.credit.AuthCheckWorkOrderFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserAllAuthCheckInfoVo getUserAllAuthCheckInfo(java.lang.Long)
+void openUserAuthCheck(aicai.facade.user2.credit.vo.request.UserAuthCheckOpenVo)
+void updateWorkChsiVo(aicai.facade.user2.credit.vo.response.UserWorkChsiVo)
+void storeUserAllByWOrkOrder(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserWorkChsiVo queryWorkChsiVoById(java.lang.Long)
+void checkUserAuthCheck(aicai.facade.user2.base.vo.response.UserAuthCheckVo)
+void quikUserAuthCheck(aicai.facade.user2.credit.vo.request.UserAuthQuikVo)
+aicai.facade.user2.credit.vo.response.UserAuthCheckRiskRepeatResultVo updateUserAuthCheck(aicai.facade.user2.credit.vo.request.UserAuthCheckModifyVo)
+aicai.facade.user2.credit.vo.response.UserAuthCheckRiskRepeatResultVo updateUserAuthCheck(aicai.facade.user2.credit.vo.request.AuthCheckModifyVo)
+aicai.facade.user2.credit.vo.response.UserAuthCheckInfoVo getUserAuthCheckDetailById(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserAuthCheckInfoVo getNewUserAuthCheckByUserid(java.lang.Long)
+aicai.vo.search.SearchResult getUserAuthCheckLog(java.lang.Long,int,int)
+aicai.vo.search.SearchResult getUserAuthCheckLog(aicai.facade.user2.base.vo.search.UserAuthCheckSearchVo,int,int)
+aicai.vo.search.SearchResult getUserAuthCheckList(java.util.HashMap,int,int)
+aicai.facade.user2.credit.vo.response.UserAuthCheckAllVo getUserAuthCheckAllById(java.lang.Long)
+java.lang.Long sumbitMqAuthCheck(aicai.facade.user2.credit.vo.request.UserAuthMqCheckAddVo)
+java.lang.Long sumbitFreshAuthCheck(aicai.facade.user2.credit.vo.request.UserAuthMqCheckAddVo)
+aicai.facade.user2.credit.vo.response.UserAuthCheckInfoVo getNewMqUserAuthCheckByUserid(java.lang.Long)
+aicai.vo.search.SearchResult getListByAuthCheckId(aicai.facade.user2.credit.vo.request.CheckTraceGetVo,int,int)
+aicai.facade.user2.credit.vo.response.UserCreditFinalStatVo getCreditFinalStatVoByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserWorkChsiVo queryWorkChsiVo(java.lang.Long,java.lang.String)
+aicai.facade.user2.credit.vo.response.UserAuthCheckTemplateVo getCheckTemplateByUserId(java.lang.Long)
+aicai.vo.search.SearchResult getUserAuthCheckListNewParm(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.credit.AuthFacade 方法列表如下:
+====================================
+void create(aicai.facade.user2.credit.vo.request.StatusActiveVo)
+void close(aicai.facade.user2.credit.vo.request.AcrCloseVo)
+java.util.List closeConfigList(java.lang.String)
+void inviteActiveUser(aicai.facade.user2.credit.vo.request.StatusActiveInviteVo)
+void giveUpQianAuth(aicai.facade.user2.credit.vo.request.AcrQiangdanBackVo)
+void notifyMianQianByCheckWorkOrder(aicai.facade.user2.credit.vo.request.AcrMqSubVo)
+void notifyDealByCheckWorkOrder(aicai.facade.user2.credit.vo.request.AuthCheckVo)
+aicai.facade.user2.credit.vo.response.RcsInfoVo getAuthRisk(long)
+void updateAuthConfig(aicai.facade.user2.credit.vo.request.UserConfigVo)
+aicai.facade.user2.credit.vo.request.UserConfigVo getAuthConfig()
+aicai.facade.user2.credit.vo.response.UserCloseConfigListVo getCloseConfigById(java.lang.Long)
+void addCloseConfig(aicai.facade.user2.credit.vo.request.UserCloseConfigAddVo)
+void modifyCloseConfig(aicai.facade.user2.credit.vo.request.UserCloseConfigModifyVo)
+void yuyue(aicai.facade.user2.credit.vo.request.AcrYuyueModifyVo)
+java.util.List listTimeOutQianAuth100Top(long)
+aicai.vo.search.SearchResult listUserAuth(java.util.HashMap,int,int)
+java.util.List listAuthTraceByid(long)
+aicai.facade.user2.base.vo.response.AcrMqGetVo getMq(long)
+aicai.facade.user2.base.vo.response.AcrMqGetVo getMqByIdentifyCard(java.lang.String)
+java.util.List mqAuthStep(long)
+aicai.facade.user2.credit.vo.response.UserAuthDetailVo authDetail(long)
+aicai.vo.search.SearchResult listQianAuth(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult listQianAuth(java.util.HashSet,java.lang.String,int,int)
+aicai.vo.search.SearchResult listYuYueAuth(java.util.HashSet,int,int)
+aicai.vo.search.SearchResult listYuYueAuth(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult listMqAuth(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult listMqAuth(java.util.HashSet,int,int)
+aicai.vo.search.SearchResult listCheckAuthBySet(java.util.HashSet,java.lang.String,int,int)
+aicai.facade.user2.credit.vo.response.AuthTraceAndWorkTop getAuthTraceAndWorkTop(long)
+java.util.List listAuthTrace(long)
+java.util.List listAuthTraceByMqId(long)
+aicai.vo.search.SearchResult listUserRecByAcrcode(java.lang.String,java.lang.String,java.lang.String,int,int)
+aicai.vo.search.SearchResult listUserAuthByAcrcode(long,java.lang.String,java.lang.String,int,int)
+long getAuthByAcrcodeAndTime(long,java.lang.String,java.lang.String)
+aicai.facade.user2.credit.vo.response.AcrCountRegVo countUserRecYmByAcrcode(java.lang.String)
+aicai.facade.user2.credit.vo.response.AcrCountMqVo countAuthYmByAcrcode(long)
+aicai.facade.user2.credit.vo.response.AcrCountAuthVo counAuthPassAndRejectNum(long)
+aicai.facade.user2.credit.vo.response.AcrCountProVo countAuthNum(java.lang.String)
+void moveYuyuedAuth(aicai.facade.user2.credit.vo.request.AcrYuyueModifyVo)
+aicai.vo.search.SearchResult listCheckAuth(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult listMqWarnning(java.util.HashMap,int,int)
+void changeToAuthing(aicai.facade.user2.credit.vo.request.UserToAuthingVo)
+void qiangDan(aicai.facade.user2.credit.vo.request.AcrQiangdanVo)
+aicai.facade.user2.base.vo.response.UserAuthGetVo getAuth(long)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.credit.LoanGraduateFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.request.UserLoanGraduationAllVo getLoanGraduationAllById(java.lang.Long)
+java.lang.String graduateAmtOffset(java.lang.Long)
+java.lang.Long updateUserTypeOfAicai(aicai.vo.search.SearchQuery)
+java.lang.Long submitLoanGraduateOrder(aicai.facade.user2.credit.vo.request.UserLoanGraduationSubmitVo)
+aicai.facade.user2.credit.vo.request.UserLoanGraduationAllVo getLoanGraduationAllByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.request.UserLoanGraduationAllVo getLoanGraduationAllByUserIdAndWorkTye(java.lang.Long,java.lang.String)
+void quitLoanWork(aicai.facade.user2.credit.vo.request.LoanWorkQuikVo)
+aicai.facade.user2.credit.vo.response.GraduateLoanUpdateResultVo updateGraduateLoan(aicai.facade.user2.credit.vo.request.GraduateLoanModifyVo)
+java.lang.Long storeGraduateLoanAll(aicai.facade.user2.credit.vo.request.UserLoanGraduationAllVo)
+aicai.facade.user2.credit.vo.request.UserLoanGraduationAllVo getActivatedGraduationLoanAllByUserId(java.lang.Long)
+void storeUserGradAllByWorkorder(java.lang.Long)
+aicai.facade.user2.credit.vo.request.GraduationInfoVo getNewGraduationInfoByUserId(java.lang.Long)
+java.lang.Long storeCreditProjectTaskInfo(aicai.facade.user2.credit.vo.info.CreditProjectInfoTaskVo)
+aicai.facade.user2.credit.vo.info.CreditProjectInfoTaskVo getNewCreditProjectTaskInfoByUserId(java.lang.Long,java.lang.String)
+void fixCheckWorkorderByFk(java.lang.String,java.lang.String)
+aicai.facade.user2.credit.vo.request.UserWorkorderGraduationVo getLoanGraduationByUserIdAndWorkTye(java.lang.Long,java.lang.String)
+aicai.facade.user2.credit.vo.info.CreditProjectInfoTaskVo getCreditProjectTaskInfoByProjectIdAndWorkType(java.lang.Long,java.lang.Long,java.lang.String)
+java.lang.Long submitGraduateLoan(aicai.facade.user2.credit.vo.request.LoanGraduationSubmitVo)
+aicai.facade.user2.credit.vo.response.LoanGraduationStatVo getLoanGraduationStatVoByUserId(java.lang.Long)
+void updateLoanGraduateById(aicai.facade.user2.credit.vo.request.UserLoanGraduationAllVo)
+aicai.vo.search.SearchResult getWorkOrderGraduationList(java.util.HashMap,int,int)
+void checkWorkorderGraduation(aicai.facade.user2.credit.vo.request.GraduateLoanCheckVo)
+aicai.vo.search.SearchResult getDealLogListByCheckId(java.lang.Long,int,int)
+void closeGraudateLoanAll(java.lang.Long)
+aicai.vo.search.SearchResult getWorkOrderGraduationListNewParm(java.util.HashMap,int,int)
+void updateGradautionAmtLoan(aicai.facade.user2.credit.vo.request.GraduationAmtLoanModifyVo)
+aicai.facade.user2.credit.vo.response.UserSelfCreditDetectStatVo getSelfCreditDetectStatVo(java.lang.Long)
+java.lang.Long addOldGraduateToTemUser(aicai.vo.search.SearchQuery)
+boolean isGradEducationComplete(java.lang.Long)
+void asynSubmitLoanGraduate(java.lang.Long,java.lang.String)
+aicai.facade.user2.credit.vo.response.LoanGraduateGrantInfoVo getLoanGraduateGrantInfoVoByWork(java.lang.Long)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.userinfo.UserRuleFacade 方法列表如下:
+====================================
+aicai.facade.user2.userinfo.vo.rule.CreditTradeValidResVo creditTradeValid(aicai.facade.user2.userinfo.vo.rule.CreditTradeValidReqVo)
+aicai.facade.user2.userinfo.vo.rule.NeedBiosyResVo isNeedBiopsy(aicai.facade.user2.userinfo.vo.rule.NeedBiosyReqVo)
+
+facade名:aicai.facade.user2.credit.SelfWorkOrderFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserCloseConfigListVo getUserCloseConfigById(java.lang.Long)
+void storeUserAllByWOrkOrder(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserWorkorderSelfcheckVo getNewSelfWorkOrderByUserId(long)
+void submitSelfWorkOrder(aicai.facade.user2.credit.vo.request.UserWorkorderSelfInfoVo)
+void checkSelfWorkOrder(aicai.facade.user2.credit.vo.request.UserWorkorderSelfLogVo)
+aicai.facade.user2.base.vo.response.UserWorkorderSelfcheckVo getSelfWorkOrderById(long)
+void closeSelfChecking(aicai.facade.user2.credit.vo.request.UserWorkorderSelfCloseVo)
+void modifySelfOrder(aicai.facade.user2.credit.vo.request.UserWorkorderSelfModifyVo)
+long getSelfLimit()
+boolean isLowerSelfLimit(long)
+void fkDealBySelfCheck(aicai.facade.user2.credit.vo.request.FkUserSelfCheckVo)
+java.lang.Long addUserSelfCheckTrace(aicai.facade.user2.credit.vo.response.UserSelfCheckTraceVo)
+void reCheckSelfWork(aicai.facade.user2.credit.vo.request.ReCheckSelfWorkVo)
+aicai.vo.search.SearchResult selfOrderChecklistNewParm(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult selfOrderChecklist(java.util.HashMap,int,int)
+aicai.facade.user2.credit.vo.response.SelfCheckResultVo submitSelfCheckVo(aicai.facade.user2.credit.vo.request.ActivateSelfCheckVo)
+void submitSelfCheckInfo(aicai.facade.user2.base.vo.request.SelfCheckVo)
+aicai.facade.user2.base.vo.request.SelfCheckVo getSelfCheckInfo(java.lang.Long)
+aicai.facade.user2.base.vo.request.SelfCheckVo getSelfCheckInfoH5(java.lang.Long)
+aicai.vo.search.SearchResult getSelfListByAuthCheckId(aicai.facade.user2.credit.vo.request.CheckTraceGetVo,int,int)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.userinfo.UserWorkConfigFacade 方法列表如下:
+====================================
+void addUserConfigSchool(aicai.facade.user2.userinfo.vo.request.AddUserConfigSchoolVo)
+void delUserConfigSchool(java.lang.Long)
+java.util.List getUserDictionaryList(java.lang.String,java.lang.String)
+java.util.List getCacheUserDictionaryList(java.lang.String,java.lang.String)
+void addUserDictionary(aicai.facade.user2.userinfo.vo.request.UserDictionaryVo)
+void delUserDictionary(aicai.facade.user2.userinfo.vo.request.UserDictionaryVo)
+aicai.vo.search.SearchResult getUserImgExceptionList(java.util.HashMap,int,int)
+java.util.List getOrderImgExceptionList(java.lang.Long,java.lang.String)
+java.lang.String getAppConVersion()
+aicai.vo.search.SearchResult getUserWorkorderOrderList(aicai.facade.user2.userinfo.vo.response.UserWorkorderOrderVo,int,int)
+java.lang.Long addUserWorkorderOrder(aicai.facade.user2.userinfo.vo.response.UserWorkorderOrderVo)
+aicai.vo.search.SearchResult configSchoolList(java.util.HashMap,int,int)
+
+facade名:aicai.facade.user2.credit.UserTradeCreditFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserTradeStatVo getUserTradeStat(aicai.facade.user2.credit.vo.response.UserTradeCreditInfoVo)
+aicai.facade.user2.credit.vo.response.UserTempCreditVo getUserTempCredit(java.lang.Long)
+void dealOutTimeTradeCredit(aicai.facade.user2.credit.vo.response.UserTradeCreditApplyVo)
+java.lang.String tradeCreditSubmitNotice(java.lang.Long,java.lang.String)
+void dealRemindTradeCredit(aicai.facade.user2.credit.vo.response.UserTradeCreditApplyVo)
+void dealWarnTradeCredit(aicai.facade.user2.credit.vo.response.UserTradeCreditApplyVo)
+java.util.List getCreditTradesRemind(java.lang.Long)
+java.util.List getCreditTradesWarn(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserTradeStatVo userTradeCreditTrigger(aicai.facade.user2.credit.vo.response.UserTradeCreditTriggerVo)
+java.util.List getTradesOutTimeLimt(java.lang.Long)
+aicai.facade.user2.credit.vo.response.UserTradeStatVo canUserTradeCredit(aicai.facade.user2.credit.vo.response.UserTradeCreditTriggerVo)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-mongo-credit 端口: 15030
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.mongo.credit.UserRegMongoFacade 方法列表如下:
+====================================
+aicai.facade.user2.mongo.credit.vo.UserBaseBiyeNetworkVo saveUserBaseBiyeNetworkVo(aicai.facade.user2.mongo.credit.vo.UserBaseBiyeNetworkVo)
+aicai.facade.user2.mongo.credit.vo.UserBaseBiyeNetworkVo getUserBaseBiyeNetworkVoByUserid(java.lang.Long)
+void delUserBaseBiyeNetworkVoByUserid(java.lang.Long)
+void delUserSelf3RejectVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserSelf3RejectVo getUserSelf3RejectVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserSelf4Graduate1CheckVo saveUserSelf4Graduate1CheckVo(aicai.facade.user2.mongo.credit.vo.UserSelf4Graduate1CheckVo)
+void delUserSelf4Graduate1CheckVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserSelf4Graduate1CheckVo getUserSelf4Graduate1CheckVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserRegSchoolVo getUserRegSchoolVoByUserid(java.lang.Long)
+void delUserRegSchoolVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserAuthSelfFreshVo getUserAuthSelfFreshVoByUserid(java.lang.Long)
+void delUserAuthSelfFreshVoByUserid(java.lang.Long)
+aicai.facade.user2.base.vo.request.UserSelfcreditSubmitVo getUserSelfcreditSubmitVoByUserid(java.lang.Long)
+aicai.facade.user2.base.vo.request.RegAuthVo saveRegAuthVo(aicai.facade.user2.base.vo.request.RegAuthVo)
+aicai.facade.user2.mongo.credit.vo.UserSelf4GraduateRejectVo saveUserSelf4RejectVo(aicai.facade.user2.mongo.credit.vo.UserSelf4GraduateRejectVo)
+aicai.facade.user2.mongo.credit.vo.UserSelf4GraduateRejectVo getUserSelf4RejectVoByUserid(java.lang.Long)
+void delUserSelf4RejectVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserAuthSelfFreshVo saveUserAuthSelfFreshVo(aicai.facade.user2.mongo.credit.vo.UserAuthSelfFreshVo)
+void delUserSelfcreditSubmitVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserAuthAsyMsgVo getUserAuthAsyMsgVoByUserid(java.lang.String)
+aicai.facade.user2.mongo.credit.vo.UserSelf4Graduate2CheckVo getUserSelf4Graduate2CheckVoByUserid(java.lang.Long)
+void delUserAuthAsyMsgVoByUserid(java.lang.String)
+aicai.facade.user2.mongo.credit.vo.UserAuthAsyMsgVo saveUserAuthAsyMsgVo(aicai.facade.user2.mongo.credit.vo.UserAuthAsyMsgVo)
+aicai.facade.user2.base.vo.request.RegAuthVo getRegAuthVoByUserid(java.lang.Long)
+void delRegAuthVoByUserid(java.lang.Long)
+aicai.facade.user2.base.vo.request.UserSelfcreditSubmitVo saveUserSelfcreditSubmitVo(aicai.facade.user2.base.vo.request.UserSelfcreditSubmitVo)
+aicai.facade.user2.mongo.credit.vo.UserSelf4Graduate2CheckVo saveUserSelf4Graduate2CheckVo(aicai.facade.user2.mongo.credit.vo.UserSelf4Graduate2CheckVo)
+void delUserSelf4Graduate2CheckVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserRegSchoolVo saveUserRegSchoolVo(aicai.facade.user2.mongo.credit.vo.UserRegSchoolVo)
+void delUserAuthSelfInfoVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserBaseCreditVo getUserBaseCreditVoByUserid(java.lang.Long)
+void delUserBaseCreditVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserBaseCreditVo saveUserBaseCreditVo(aicai.facade.user2.mongo.credit.vo.UserBaseCreditVo)
+aicai.facade.user2.mongo.credit.vo.UserSelf3RejectVo saveUserSelf3RejectVo(aicai.facade.user2.mongo.credit.vo.UserSelf3RejectVo)
+aicai.facade.user2.mongo.credit.vo.UserAuthSelfInfoVo getUserAuthSelfInfoVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserAuthSelfInfoVo saveUserAuthSelfInfoVo(aicai.facade.user2.mongo.credit.vo.UserAuthSelfInfoVo)
+aicai.facade.user2.mongo.credit.vo.UserBiyeWorkUnitVo getUserBiyeWorkUnitVoByUserid(java.lang.Long)
+void delUserBiyeWorkUnitVoByUserid(java.lang.Long)
+void delUserSelf12RejectVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserSelf12RejectVo saveUserSelf12RejectVo(aicai.facade.user2.mongo.credit.vo.UserSelf12RejectVo)
+aicai.facade.user2.mongo.credit.vo.UserSelf12RejectVo getUserSelf12RejectVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserBiyeWorkUnitVo saveUserBiyeWorkUnitVo(aicai.facade.user2.mongo.credit.vo.UserBiyeWorkUnitVo)
+aicai.facade.user2.mongo.credit.vo.UserBiyeContactVo getUserBiyeContactVoByUserid(java.lang.Long)
+aicai.facade.user2.mongo.credit.vo.UserBiyeContactVo saveUserBiyeContactVo(aicai.facade.user2.mongo.credit.vo.UserBiyeContactVo)
+void delUserBiyeContactVoByUserid(java.lang.Long)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-oauth 端口: 15040
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.oauth.UserOauth2ValidateFacade 方法列表如下:
+====================================
+aicai.facade.user2.oauth.vo.Oauth2ResultVo validateAccessToken(java.lang.String,aicai.facade.user2.oauth.vo.Oauth2UserLoginInfoVo)
+aicai.facade.user2.oauth.vo.Oauth2ResultVo validateAccessToken(java.lang.String,java.lang.Long)
+aicai.facade.user2.oauth.vo.Oauth2ResultVo validateAccessToken(java.lang.String,java.lang.String)
+aicai.facade.user2.oauth.vo.Oauth2ResultVo validateAccessToken(java.lang.String)
+aicai.facade.user2.oauth.vo.Oauth2ResultVo parseParamsBySignature(java.lang.String)
+
+facade名:aicai.facade.user2.oauth.UserOauth2Facade 方法列表如下:
+====================================
+aicai.facade.user2.oauth.vo.Oauth2CheckDoneVo oauth2CheckAutopassStatus(aicai.facade.user2.oauth.vo.Oauth2BaseVo)
+aicai.facade.user2.oauth.vo.Oauth2CheckDoneVo oauth2CheckByUser(aicai.facade.user2.oauth.vo.Oauth2BaseVo)
+aicai.facade.user2.oauth.vo.Oauth2CheckDoneVo oauth2CheckDoneStatus(aicai.facade.user2.oauth.vo.Oauth2BaseVo)
+aicai.facade.user2.oauth.vo.Oauth2UserVo getAccessTokenByOauthCode(aicai.facade.user2.oauth.vo.Oauth2WorkorderVo)
+aicai.facade.user2.oauth.vo.Oauth2UserVo getAccessTokenBySignature(java.lang.String,aicai.facade.user2.userinfo.vo.register.RegisterH5Vo)
+aicai.facade.user2.oauth.vo.Oauth2PartnerVo getOauth2PartnerByClient(java.lang.String)
+aicai.facade.user2.oauth.vo.Oauth2UserVo getOauth2UserByRefreshToken(aicai.facade.user2.oauth.vo.Oauth2UserVo)
+aicai.facade.user2.oauth.vo.Oauth2UserVo getOauth2UserByAccessToken(java.lang.String)
+aicai.facade.user2.oauth.vo.Oauth2ResultVo initPartner()
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-open 端口: 15060
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.open.UserInfoOpenFacade 方法列表如下:
+====================================
+aicai.facade.user2.open.vo.info.UserInfoOpenVo getUserInfo(java.lang.Long,java.lang.String)
+aicai.facade.user2.open.vo.Oauth2UserOpenVo getOauth2User(java.lang.Long)
+aicai.facade.user2.open.vo.info.UserAllInfoVo getUserAllInfo(java.lang.Long,java.lang.String)
+aicai.facade.user2.open.vo.risk.RiskUserInfoVo getRiskUserInfoVo(java.lang.Long)
+
+facade名:aicai.facade.user2.open.WsWorkorderFacade 方法列表如下:
+====================================
+void fixUnFinishedCreateWorkorderLog(java.lang.Long[])
+void createWorkOrder(java.lang.String,aicai.facade.user2.credit.vo.ws.WorkOrderRequest)
+void notifyAfterReject(aicai.facade.user2.credit.vo.ws.NotifyAfterCreditClosedRequest)
+java.util.List getWorkorderList(java.util.HashMap)
+
+facade名:aicai.facade.user2.open.UserContractOpenFacade 方法列表如下:
+====================================
+aicai.facade.user2.open.vo.base.UserOpenResult queryContractList(aicai.facade.user2.open.vo.base.UserOpenRequest)
+aicai.facade.user2.open.vo.base.UserOpenResult modifyUserContractBaseByThirdPlatDone(aicai.facade.user2.open.vo.base.UserOpenRequest)
+aicai.facade.user2.open.vo.base.UserOpenResult generateTempUrl(java.lang.String,int)
+aicai.facade.user2.open.vo.base.UserOpenResult queryContractTemplateList(aicai.facade.user2.open.vo.base.UserOpenRequest)
+aicai.facade.user2.open.vo.base.UserOpenResult createContractBase(aicai.facade.user2.open.vo.base.UserOpenRequest)
+aicai.facade.user2.open.vo.base.UserOpenResult createUserContractBaseWithPdf(aicai.facade.user2.open.vo.base.UserOpenRequest)
+
+facade名:aicai.facade.user2.open.OpenCreditFacade 方法列表如下:
+====================================
+void changeCreditAmtByYyyd(aicai.facade.user2.open.vo.request.YyydAmtChangeVo)
+aicai.facade.user2.open.vo.base.UserOpenResult getUserCreditStatusByUserId(aicai.facade.user2.open.vo.base.UserOpenRequest)
+java.lang.Long creditByYyyd(aicai.facade.user2.open.vo.request.YyydRegSubmitVo)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-score 端口: 15070
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.score.ScoreManageFacade 方法列表如下:
+====================================
+aicai.facade.user2.score.vo.ScoreTaskVo getByPrimaryKey(java.lang.Long)
+java.util.List selectConsumeScoreFlowByIds(java.util.Map)
+java.util.List selectEarnScoreFlowByIds(java.util.HashMap)
+int updateTaskConfig(aicai.facade.user2.score.vo.ScoreTaskVo,java.util.List)
+int updateScoreTaskConfig(aicai.facade.user2.score.vo.ScoreTaskVo)
+void deleteScoreTaskConfigById(java.lang.Long)
+aicai.vo.search.SearchResult getScoreearnLogVoByPage(aicai.vo.search.SearchQuery)
+aicai.vo.search.SearchResult getScoreConsumeLogByPage(aicai.vo.search.SearchQuery)
+aicai.vo.search.SearchResult getScoreTaskConfig(aicai.vo.search.SearchQuery)
+java.util.List selectRecycelTaskByTaskId(java.lang.Long)
+
+facade名:aicai.facade.user2.score.ScoreFacade 方法列表如下:
+====================================
+int log(java.lang.String,java.lang.Long,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,boolean)
+aicai.facade.user2.score.vo.ScoreEarnLogVo getScoreByOrderNum(java.lang.String)
+aicai.facade.user2.score.vo.ScoreEarnLogVo getScoreByUUID(java.lang.String)
+aicai.facade.user2.score.vo.ScoreCompletedVo getCpsScoreCompletedByWhere(java.lang.String,java.lang.String)
+aicai.facade.user2.score.vo.ScoreCompletedVo getScoreCompletedFromCache(java.lang.String,java.lang.Long)
+aicai.facade.user2.score.vo.response.SignScoreTaskVo getSignScoreTask(java.lang.String,java.lang.String)
+java.lang.Integer getUserScore(java.lang.String)
+int deductionScore(java.lang.String,java.lang.Long)
+int deductionScoreWithLog(java.lang.String,java.lang.Long,java.lang.String)
+java.util.List selectRecycleTaskByTaskId(java.lang.Long)
+int logConresult(java.lang.String,java.lang.String,java.util.Date,java.lang.String,boolean,java.lang.String)
+int updateEarLog(java.lang.Long,java.lang.String)
+java.util.List getSignRecord(java.lang.Long,java.util.Date,java.util.Date)
+boolean calculateRemindUserInfo(aicai.facade.user2.score.vo.response.ScoreRemindSchRealTaskRequestVo)
+aicai.facade.user2.score.vo.response.ScoreTaskResponeVo getScoreTask(java.lang.String)
+int completeScoreTask(java.lang.String,java.lang.String)
+int earlog(java.lang.String,java.lang.Long,java.lang.String,java.lang.String)
+int earlog(java.lang.String,java.lang.Long,java.lang.String)
+boolean isRealyDeductionByProductId(java.lang.String,java.lang.String)
+boolean insertCompletedScoreTask(java.lang.String,java.lang.String)
+void doScoreTask(java.lang.String,java.lang.String)
+aicai.facade.user2.score.vo.ScoreCompletedVo getCompletedFromCache(java.lang.String,java.lang.String)
+aicai.facade.user2.score.vo.ScoreTaskVo getScoreTaskInfo(java.lang.Long)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-credit 端口: 15080
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.credit.credit.CreditRealnameCheckFacade 方法列表如下:
+====================================
+void whiteNameByRisk(java.lang.Long)
+java.lang.Long creditRealCheckByBackEnd(aicai.facade.user2.credit.vo.realname.UserRealnameCheckOrderVo)
+aicai.facade.user2.credit.vo.realname.CreditRealnameCheckAllVo getCreditRealnameCheckAllVoById(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.CreditThirdFlowFacade 方法列表如下:
+====================================
+aicai.vo.result.ResultVo applyFastExternalRealnameFlow(aicai.facade.user2.credit.vo.third.ThirdRealnameFlowApplyVo,java.lang.String)
+aicai.vo.result.ResultVo queryUserRegisterAndRealNameResult(aicai.facade.user2.credit.vo.third.ThirdRealnameFlowQueryVo)
+aicai.vo.result.ResultVo applyThirdImportRealnameFlow(aicai.facade.user2.credit.vo.third.ThirdRealnameFlowApplyVo,java.lang.String)
+
+facade名:aicai.facade.user2.credit.credit.CreditProjectBizFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.project.CreditProjectBizAllVo getNewCreditProjectBizAll(java.lang.Long,java.lang.String)
+void saveCreditProjectInfoAll(aicai.facade.user2.credit.vo.project.CreditProjectInfoSubmitVo)
+aicai.facade.user2.credit.vo.project.CreditProjectBizAllVo getActivatedCreditProjectBizAll(java.lang.Long,java.lang.String)
+aicai.vo.result.ResultVo applyCreditProjectBizFastExternal4BaseByj(aicai.facade.user2.credit.vo.project.CreditProjectBiztFastExtApply4BaseByjVo,java.lang.String)
+aicai.facade.user2.credit.vo.project.CreditProjectBizVo getCreditProjectBizById(java.lang.Long)
+java.lang.Long applyCreditProjectBiz(aicai.facade.user2.credit.vo.project.CreditProjectBizApplyVo)
+aicai.facade.user2.credit.vo.project.CreditProjectBizAllVo getCreditProjectBizAllByTableName(java.lang.Long,java.lang.String,java.util.List)
+aicai.facade.user2.credit.vo.risk.RiskInfoByjNoEduCreditVo getRiskInfoByjNoEduCreditVoByCheckId(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.CreditInfoFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.info.CreditInfoAllVo getNewCreditInfoAllByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.info.CreditInfoAllVo getNewCreditInfoAll(java.lang.Long,java.lang.String)
+aicai.facade.user2.credit.vo.info.CreditInfoAllVo getNewCreditInfoAllClose(java.lang.Long)
+aicai.facade.user2.credit.vo.info.CreditInfoAllVo getNewCreditInfoAllActive(java.lang.Long)
+java.lang.Long saveCreditInfoAllWithBiz(aicai.facade.user2.credit.vo.info.CreditInfoAllVo)
+java.lang.Long saveCreditInfoAllInMap(java.lang.Long,java.util.Map,java.util.Map)
+
+facade名:aicai.facade.user2.credit.credit.CreditTaskFacade 方法列表如下:
+====================================
+void realNameAuthTask(aicai.facade.user2.credit.vo.task.RealNameAuthRequest)
+
+facade名:aicai.facade.user2.credit.credit.CreditDataBizFacade 方法列表如下:
+====================================
+boolean needSubmitMobile(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.CreditPatchDataFacade 方法列表如下:
+====================================
+void pushPatchDataByUserId(java.lang.Long,aicai.facade.user2.credit.vo.patch.CreditPatchDataVo)
+aicai.facade.user2.credit.vo.patch.CreditPatchDataVo getPatchDataByUserId(java.lang.Long)
+void clearPatchDataByUserId(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.CreditProjectBizCardFacade 方法列表如下:
+====================================
+java.lang.Long saveCreditProjectBizCardAllVo(aicai.facade.user2.credit.vo.project.CreditProjectBizCardAllVo)
+java.lang.Long applyCreditProjectBizCard(aicai.facade.user2.credit.vo.project.CreditProjectBizCardApplyVo)
+java.lang.Long syncCreditCardToLoanGraduate(aicai.facade.user2.credit.vo.project.CreditProjectBizCardApplyVo)
+aicai.facade.user2.credit.vo.stat.MiCardStatVo getMiCardStatByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.stat.MiCardProInfoVo getMiCardProInfoVoByUserId(java.lang.Long)
+void pushZSMiCardInfoByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.workorder.CreditWorkCheckBizCardVo getCreditWorkCheckBizCardVoByUserId(java.lang.Long)
+aicai.facade.user2.credit.vo.workorder.CreditWorkCheckBizCardVo getCreditWorkCheckBizCardVoById(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.CreditToolCrawlMobileFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserMobileOperatorVo submitCreditToolCrawlMobile(aicai.facade.user2.credit.vo.crawlmobile.CreditToolCrawlMobileVo)
+aicai.facade.user2.credit.vo.crawlmobile.CreditToolCrawlMobileVo getCreditToolCrawlMobileVoByUserId(java.lang.Long)
+
+facade名:aicai.facade.user2.credit.credit.partner.PuCreditFacade 方法列表如下:
+====================================
+java.lang.String getOauthApplyUrl(java.lang.String,java.lang.String)
+aicai.facade.user2.credit.vo.partner.pu.PuUserInfoVo dealPuUserInfoByOauth(java.lang.String)
+aicai.facade.user2.credit.vo.partner.pu.PuUserInfoVo getPuUserInfoByUserId(java.lang.Long)
+void authorizeByTel(java.lang.String)
+boolean needAuthorizeByTel(java.lang.String)
+
+facade名:aicai.facade.user2.credit.credit.CreditWorkCheckFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.workorder.CreditWorkCheckVo getCreditWorkCheck(java.lang.Long,java.lang.String)
+aicai.facade.user2.credit.vo.workorder.CreditWorkCheckAllVo getCreditWorkCheckAll(java.lang.Long,java.lang.String)
+aicai.facade.user2.credit.vo.workorder.CreditWorkCheckResultVo getCreditWorkCheckResult(java.lang.Long,java.lang.String)
+void storeUserInfoByWorkId(java.lang.Long)
+void updateCreditWorkCheckAll(aicai.facade.user2.credit.vo.workorder.CreditWorkCheckAllVo)
+void asynRequestCheckResult(java.lang.Long,java.lang.String)
+aicai.vo.search.SearchResult getCreditWorkOrderList(java.util.HashMap,int,int)
+void checkCreditWorkorder(aicai.facade.user2.credit.vo.workorder.CreditWorkOrderCheckVo)
+int getCreditWorkCheckCountByUserId(java.lang.Long,java.lang.String)
+aicai.vo.search.SearchResult getCheckTraceListByCheckId(java.lang.Long,int,int)
+aicai.facade.user2.credit.vo.workorder.CreditWorkCheckAllVo getCreditWorkCheckBizVoById(java.lang.Long)
+aicai.vo.search.SearchResult searchTaskRecordList(aicai.vo.search.SearchQuery)
+
+facade名:aicai.facade.user2.credit.CreditConfigFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.config.vo.CreditConfigWorkVo getCreditConfigWorkByCode(java.lang.String)
+java.util.List getTablesCacheByCode(java.lang.String)
+aicai.facade.user2.credit.config.dmo.CreditNodeVoDMO getNodeDMOByFlowByNodeId(java.lang.String,java.lang.Long)
+aicai.facade.user2.credit.config.dmo.CreditNodeVoDMO getNodeDMOByNodeId(java.lang.Long)
+aicai.facade.user2.credit.config.dmo.CreditNodeVoDMO getStartNodeDMO(java.lang.String)
+
+facade名:aicai.facade.user2.credit.credit.CreditRealnameBizFacade 方法列表如下:
+====================================
+void saveCreditRealnameInfoAll(aicai.facade.user2.credit.vo.realname.CreditRealnameInfoSubmitVo)
+java.lang.Long applyCreditRealnameBiz(aicai.facade.user2.credit.vo.realname.CreditRealnameBizApplyVo)
+aicai.vo.result.ResultVo applyCreditRealnameBizFastExternal(aicai.facade.user2.credit.vo.third.ThirdRealnameApplyVo,java.lang.String)
+aicai.vo.result.ResultVo applyEduAuthFastExternal(aicai.facade.user2.credit.vo.third.ThirdRealnameEduAuthVo,java.lang.String)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-info-search 端口: 15120
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.search.AuthCheckWorkorderSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getUserAuthCheckLog(aicai.facade.user2.base.vo.search.UserAuthCheckSearchVo,int,int)
+aicai.vo.search.SearchResult getUserAuthCheckList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getUserAuthCheckListNewParm(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getListByAuthCheckId(aicai.facade.user2.credit.vo.request.CheckTraceGetVo,int,int)
+
+facade名:aicai.facade.user2.search.CreditWorkOrderSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getCreditWorkOrderList(java.util.HashMap,int,int)
+int getCreditWorkCheckCountByUserId(java.lang.Long,java.lang.String)
+
+facade名:aicai.facade.user2.search.UserRealNameSearchFacade 方法列表如下:
+====================================
+java.util.List getWorkOrderListByUserId(java.lang.Long)
+aicai.vo.search.SearchResult getWorkOrderListByWhereNewParm(java.util.HashMap,int,int)
+aicai.facade.user2.base.vo.search.UserWorkorderRealnameSearchVo getWorkOrderByPrimaryKey(java.lang.Long)
+aicai.vo.search.SearchResult getWorkOrderListByWhere(java.util.HashMap,int,int)
+
+facade名:aicai.facade.user2.search.SelfWorkOrderSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getSelfListByAuthCheckId(aicai.facade.user2.credit.vo.request.CheckTraceGetVo,int,int)
+aicai.vo.search.SearchResult selfOrderChecklistNewParm(java.util.HashMap,int,int)
+
+facade名:aicai.facade.user2.search.SelfCreditWorkorderSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getSelfCreditWorkorderListNewParm(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getDealLogListByCheckId(aicai.facade.user2.credit.vo.request.CheckTraceGetVo,int,int)
+
+facade名:aicai.facade.user2.search.LoanGraduateSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getDealLogListByCheckId(java.lang.Long,int,int)
+aicai.vo.search.SearchResult getWorkOrderGraduationList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getWorkOrderGraduationListNewParm(java.util.HashMap,int,int)
+
+facade名:aicai.facade.user2.search.UserSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getUserList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getApplyTelList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getTelDealList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getUserTelLogList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getBanklist(java.util.HashMap,int,int)
+java.util.List getUidsBySettledate(int,int,int)
+java.util.List getCloseSelfRejectUser()
+java.util.List getEmailLogs(long)
+aicai.facade.user2.base.vo.response.UserCreditStatusVo getUserStatusSearchByUserId(java.lang.Long)
+aicai.vo.search.SearchResult getWeihuLogsLists(aicai.facade.user2.search.vo.request.OperateLogRequestVo,int,int)
+aicai.facade.user2.base.vo.response.UserAllGetVo searchUserAll(java.lang.Long)
+aicai.facade.user2.userinfo.vo.response.UserGradAllGetVo searchUserGradAll(java.lang.Long)
+aicai.facade.user2.userinfo.vo.response.UserGetVo searchUser(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoGetVo searchInfoByUid(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserBizGetVo searchUserBiz(java.lang.Long)
+aicai.facade.user2.base.vo.UserSchoolVo searchUserSchoolByUid(java.lang.Long)
+aicai.vo.search.SearchResult getLoginLog(java.util.HashMap,int,int)
+java.util.List getUidsByMianQianPassDate(java.lang.String,int,int)
+aicai.facade.user2.base.vo.info.UserIdentificationVo searchUserIdentificationVo(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoEmailVo searchUserInfoEmail(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoSelfcheckVo searchUserInfoSelfCheck(java.lang.Long)
+aicai.facade.user2.userinfo.vo.request.UserInfoAddressVo searchUserInfoAddress(java.lang.Long)
+aicai.facade.user2.userinfo.vo.request.UserInfoJobVo searchUserInfoJob(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoContactVo searchUserInfoContact(java.lang.Long)
+
+facade名:aicai.facade.user2.search.UserCreditWorkCheckSearchFacade 方法列表如下:
+====================================
+aicai.vo.search.SearchResult getWorkOrderGraduationBaseList(java.util.HashMap,int,int)
+aicai.vo.search.SearchResult getDealLogListByCheckId(java.lang.Long,int,int)
+
+facade名:aicai.facade.user2.search.AuthSearchFacade 方法列表如下:
+====================================
+java.util.List listTimeOutQianAuth100Top(long)
+aicai.vo.search.SearchResult listUserAuth(java.util.HashMap,int,int)
+java.util.List listAuthTraceByid(long)
+aicai.facade.user2.credit.vo.response.AcrCountMqVo countAuthYmByAcrcode(long)
+aicai.vo.search.SearchResult listUserAuthByAcrcode(long,java.lang.String,java.lang.String,int,int)
+long getAuthByAcrcodeAndTime(long,java.lang.String,java.lang.String)
+aicai.facade.user2.credit.vo.response.AcrCountAuthVo counAuthPassAndRejectNum(long)
+aicai.vo.search.SearchResult listCheckAuthBySet(java.util.HashSet,java.lang.String,int,int)
+aicai.vo.search.SearchResult listUserRecByAcrcode(java.lang.String,java.lang.String,java.lang.String,int,int)
+aicai.facade.user2.credit.vo.response.AcrCountProVo countAuthNum(java.lang.String)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-third 端口: 15130
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.third.ThirdUserInfoFacade 方法列表如下:
+====================================
+void deleteThirdUserInfo(java.lang.Long)
+java.lang.Long insertUserInfoVo(java.lang.Long,aicai.facade.user2.third.vo.ThirdUserInfoVo)
+java.lang.Long insertUserInfoVoByVoJson(java.lang.Long,java.lang.String)
+java.lang.Long updateUserInfoVo(aicai.facade.user2.third.vo.ThirdUserInfoVo)
+aicai.facade.user2.third.vo.ThirdUserInfoVo getDeliverRefInfo(java.lang.String,java.lang.Long)
+aicai.facade.user2.third.vo.ThirdUserInfoVo getOptimalUserInfoVoByThird(java.lang.Long)
+
+facade名:aicai.facade.user2.third.HeiZuUserFacade 方法列表如下:
+====================================
+aicai.facade.user2.third.vo.heizu.HeiZuUserInfoAddVo needAddInfoHeiZu(java.lang.Long)
+aicai.facade.user2.third.vo.heizu.HeiZuRealNameAuthResponseVo realNameAuthHeiZu(aicai.facade.user2.third.vo.heizu.HeiZuRealNameAuthReqVo)
+boolean saveContactsHeiZu(aicai.facade.user2.third.vo.heizu.HeiZuContactsVo)
+aicai.facade.user2.third.vo.heizu.HeiZuContactsVo getContactsHeiZu(java.lang.Long)
+
+facade名:aicai.facade.user2.third.ThirdNoticeFacade 方法列表如下:
+====================================
+void noticeChangeCreditStatusByWork(java.lang.Long,java.lang.String,java.lang.Long,java.lang.String)
+void noticeOrderToAicaiTradeSys(java.lang.String,java.lang.String,java.lang.Long)
+
+facade名:aicai.facade.user2.third.ThirdUserCreditStatFacade 方法列表如下:
+====================================
+aicai.facade.user2.third.vo.response.ThirdUserStatRVo getThirdUserCStatByMd5Name(aicai.facade.user2.third.vo.param.ThirdUserCreditStatPVo)
+
+facade名:aicai.facade.user2.third.ThirdUserOrderFacade 方法列表如下:
+====================================
+aicai.facade.user2.third.vo.response.ThirdUserOrderRVo getThirdUserOrderRVoByOrderNo(java.lang.String,java.lang.String)
+
+facade名:aicai.facade.user2.mongo.third.MongoThirdFacade 方法列表如下:
+====================================
+void parseMongoThirdUserOrder(java.lang.String,java.lang.String,java.lang.String)
+
+++++++++++++++++++++++++++++++++++++++++++++
+服务名:user-services-userbase 端口: 15160
+++++++++++++++++++++++++++++++++++++++++++++
+facade名:aicai.facade.user2.userinfo.UserBaseCreditDataFacade 方法列表如下:
+====================================
+aicai.facade.user2.credit.vo.response.UserStatBizInfoVo getCacheUserStatBizInfoByUserId(java.lang.Long)
+
+facade名:aicai.facade.user2.userinfo.UserBaseInfoFacade 方法列表如下:
+====================================
+aicai.facade.user2.base.vo.response.UserStatVo getUserStatByUserid(long)
+aicai.facade.user2.userinfo.vo.response.UserGetVo getUser(long)
+aicai.facade.user2.base.vo.UserVo getUserVo(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserBizGetVo getUserBiz(long)
+aicai.facade.user2.base.vo.UserEducationVo getUserEducation(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoEmailVo getUserInfoEmail(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoSelfcheckVo getUserInfoSelfCheck(java.lang.Long)
+aicai.facade.user2.userinfo.vo.request.UserInfoAddressVo getUserInfoAddress(java.lang.Long)
+aicai.facade.user2.userinfo.vo.request.UserInfoJobVo getUserInfoJob(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoStatVo getUserInfoStat(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoFundVo getUserInfoFund(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoSocialSecurityVo getUserInfoSocialSecurity(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoGetVo getUserInfoByIdentifyCard(java.lang.String)
+aicai.facade.user2.userinfo.vo.response.UserAccountGetVo getAccount(long,java.lang.String)
+java.lang.Long getUseridByTel(java.lang.String)
+aicai.facade.user2.base.vo.response.UserInfoGetVo getInfoByUid(long)
+aicai.facade.user2.base.vo.UserSchoolVo getUserSchoolByUid(long)
+aicai.facade.user2.base.vo.UserSchoolVo getUserSchoolStuByUid(long)
+aicai.facade.user2.base.vo.info.UserIdentificationVo getUserIdentificationVo(java.lang.Long)
+aicai.facade.user2.base.vo.info.UserInfoContactVo getUserInfoContact(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoGetSchoolVo getUserInfoGetSchoolVo(java.lang.Long)
+
+facade名:aicai.facade.user2.userinfo.UserBaseBizFacade 方法列表如下:
+====================================
+aicai.facade.user2.base.vo.UserBizInfoVo getUserBizInfoVoByCache(java.lang.Long)
+
+facade名:aicai.facade.user2.userinfo.UserBaseDetectFacade 方法列表如下:
+====================================
+aicai.facade.user2.common.vo.response.UserInfoVivodetectVo getNewsValidVivoByUserId(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo getNewOcrInfoByuseId(java.lang.Long)
+aicai.facade.user2.base.vo.response.UserInfoOcrdetectVo getNewValidOcrByUseId(java.lang.Long)
+
+>>>>>>>>>统计>>>>>>>>>>>>>
+服务数统计: 12
+facade数统计: 79
+方法列表统计: 771

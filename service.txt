@@ -1,0 +1,12 @@
+user-services-xxw 15090
+user-services-contract 15140
+user-services-common 15010
+user-services-info 15020
+user-services-mongo-credit 15030
+user-services-oauth 15040
+user-services-open 15060
+user-services-score 15070
+user-services-credit 15080
+user-services-info-search 15120
+user-services-third 15130
+user-services-userbase 15160
